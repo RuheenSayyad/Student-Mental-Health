@@ -1,0 +1,21 @@
+# Project configuration (read by src/utils.py)
+dataset:
+  name: "Student Mental Health Survey"
+  raw_path: "data/raw/Student_Mental_Health.csv"
+  processed_dir: "data/processed"
+  target: "depression"
+  test_size: 0.25
+  random_state: 42
+
+mlflow:
+  tracking_uri: "sqlite:///mlflow.db"
+  experiment_name: "Student_Depression_Prediction"
+  registered_model_name: "Student_Depression_Production_Model"
+  decision_metric: "recall"
+
+paths:
+  models_dir: "models"
+  outputs_dir: "outputs"
+  artifacts_dir: "artifacts"
+  reports_dir: "reports"
+  logs_dir: "logs"

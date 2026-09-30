@@ -1,0 +1,26 @@
+{
+    "dataset_name": "Student Mental Health Survey",
+    "train_shape": [
+        75,
+        17
+    ],
+    "test_shape": [
+        26,
+        17
+    ],
+    "numerical_features": [
+        "age",
+        "year_of_study",
+        "cgpa_numeric",
+        "symptom_burden_score",
+        "senior_high_achiever"
+    ],
+    "categorical_features": [
+        "gender",
+        "marital_status",
+        "anxiety",
+        "panic_attack",
+        "specialist_treatment",
+        "faculty_group"
+    ]
+}
