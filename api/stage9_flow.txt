@@ -1,0 +1,8 @@
+Stage 9 / Lab 10 Production Serving Pipeline Flow:
+1. Client sends POST request with Student Survey JSON.
+2. Pydantic schema validation executes (schemas.py).
+3. If invalid -> 422 JSONResponse logged to inference_log.jsonl.
+4. If valid -> api.preprocessing transforms features to model format.
+5. Loaded model in deployment/ predicts depression probability & risk level.
+6. Successful inference logged with latency_ms to logs/inference/inference_log.jsonl.
+7. PredictionResponse returned to caller.

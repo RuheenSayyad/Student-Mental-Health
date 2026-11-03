@@ -1,0 +1,21 @@
+name: Lab 13 - Runner Environment Healthcheck
+
+on:
+  workflow_dispatch:
+
+jobs:
+  runner-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify Python Environment
+        run: |
+          python --version
+          python -c "import sys; print('System prefix:', sys.prefix)"

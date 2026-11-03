@@ -1,0 +1,16 @@
+{
+    "status": "success",
+    "model_name": "Student_Depression_Production_Model",
+    "model_version": "8",
+    "run_id": "9759b65bcd704e1aa126924b1c50b95b",
+    "docker_image": "student-mental-health-api:model-v8",
+    "docker_built": false,
+    "kubernetes_deployment": "student-mental-health-api",
+    "kubernetes_updated": false,
+    "app_label": "student-mental-health-api",
+    "deployment_bundle": {
+        "model": "deployment\\model.pkl",
+        "preprocessor": "deployment\\preprocessor.pkl",
+        "metadata": "deployment\\model_metadata.json"
+    }
+}

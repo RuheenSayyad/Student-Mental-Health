@@ -1,0 +1,13 @@
+{
+    "status": "success",
+    "model_name": "Student_Depression_Production_Model",
+    "decision_metric": "recall",
+    "candidate_version": "11",
+    "candidate_run_id": "238e58c3f1404b14a13630d8b63e65cc",
+    "candidate_metric": 0.5,
+    "production_version_before": "9",
+    "production_metric_before": 0.6,
+    "promoted": false,
+    "decision": "champion_retained",
+    "production_version_after": "9"
+}

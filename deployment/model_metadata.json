@@ -1,0 +1,8 @@
+{
+    "model_name": "Student_Depression_Production_Model",
+    "model_version": "8",
+    "model_stage": "Production",
+    "run_id": "9759b65bcd704e1aa126924b1c50b95b",
+    "model_source": "models:/m-1c1c03dc9077402a9bf226bd48741aa4",
+    "source": "MLflow"
+}

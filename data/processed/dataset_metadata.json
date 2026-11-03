@@ -1,11 +1,20 @@
 {
     "dataset_name": "Student Mental Health Survey",
-    "train_shape": [
-        75,
+    "target_column": "depression",
+    "train_shape_raw": [
+        87,
+        11
+    ],
+    "test_shape_raw": [
+        29,
+        11
+    ],
+    "train_shape_transformed": [
+        87,
         17
     ],
-    "test_shape": [
-        26,
+    "test_shape_transformed": [
+        29,
         17
     ],
     "numerical_features": [
@@ -22,5 +31,11 @@
         "panic_attack",
         "specialist_treatment",
         "faculty_group"
-    ]
+    ],
+    "split_test_size": 0.25,
+    "split_random_state": 42,
+    "fixed_test_set": true,
+    "test_student_ids_path": "data/processed\\test_student_ids.csv",
+    "raw_train_path": "data/processed\\X_train_raw.csv",
+    "raw_test_path": "data/processed\\X_test_raw.csv"
 }

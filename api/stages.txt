@@ -1,0 +1,15 @@
+Student Mental Health MLOps Architecture Stages:
+==================================================
+Stage 1: Data Ingestion & Lineage (01_load_data.py)
+Stage 2: Schema Validation (02_validate_data.py)
+Stage 3: Preprocessing & Feature Engineering (03_preprocessing.py)
+Stage 4: Output Matrix Validation (04_validate_outputs.py)
+Stage 5: Training & MLflow Registry (05_train_registry.py)
+Stage 6: Model Evaluation (06_model_evaluation.py)
+Stage 7: Quality Gate Verification (07_quality_gate.py)
+Stage 8: Champion-Challenger Lifecycle (08_automate_lifecycle.py)
+Stage 9: Deployment Artifact Bundling (11_prepare_deployment.py)
+Stage 10: API Model Serving (api/main.py)
+Stage 11: Container & K8s Orchestration (deployment/deploy_production.py)
+Stage 12: Continuous Monitoring & Drift Detection (12_*.py)
+Stage 13: Automated Retraining Trigger & CI/CD (12_monitor_trigger.py & GitHub Actions)

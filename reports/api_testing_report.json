@@ -1,0 +1,13 @@
+{
+    "test_name": "API Latency and Concurrency Benchmark",
+    "requests_sent": 50,
+    "successful_requests": 50,
+    "latency_ms": {
+        "mean": 68.48,
+        "p50": 44.64,
+        "p95": 143.42,
+        "p99": 305.13
+    },
+    "sla_target_p95_ms": 100.0,
+    "sla_passed": false
+}

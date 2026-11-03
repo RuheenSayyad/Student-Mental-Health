@@ -1,0 +1,38 @@
+{
+    "lab": "Lab 9 - Failure Injection & Recovery",
+    "total_tests": 5,
+    "passed_tests": 5,
+    "status": "PASSED",
+    "scenarios": [
+        {
+            "scenario": "missing_data",
+            "expected": "HALT",
+            "actual": "HALT",
+            "passed": true
+        },
+        {
+            "scenario": "invalid_datatype",
+            "expected": "HALT",
+            "actual": "HALT",
+            "passed": true
+        },
+        {
+            "scenario": "schema_mismatch",
+            "expected": "HALT",
+            "actual": "HALT",
+            "passed": true
+        },
+        {
+            "scenario": "preprocessing_inconsistency",
+            "expected": "HALT",
+            "actual": "HALT",
+            "passed": true
+        },
+        {
+            "scenario": "missing_model_artifact",
+            "expected": "RECOVER",
+            "actual": "RECOVER",
+            "passed": true
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-mental-health-api
+  labels:
+    app: student-mental-health-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-mental-health-api
+  template:
+    metadata:
+      labels:
+        app: student-mental-health-api
+    spec:
+      containers:
+        - name: student-mental-health-api
+          image: student-mental-health-api:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000

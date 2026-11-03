@@ -1,0 +1,12 @@
+[
+  {
+    "dataset_version": "v02",
+    "archive_file": "data/raw/archive/student_v01.csv",
+    "source_file": "data/raw/new_student_mental_health.csv",
+    "new_data_hash": "2fc7aa56e8af7775b2080e56c1fa12d87a75e833d6a5566f303c1f4d3e65e4b7",
+    "previous_rows": 101,
+    "new_rows": 15,
+    "current_rows": 116,
+    "timestamp": "2026-11-02T23:25:35.684059+00:00"
+  }
+]

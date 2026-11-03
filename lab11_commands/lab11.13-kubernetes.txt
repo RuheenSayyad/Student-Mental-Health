@@ -1,0 +1,17 @@
+# Kubernetes Commands Reference for Student Mental Health API
+
+1. Apply manifests:
+   kubectl apply -f k8s/deployment.yaml
+   kubectl apply -f k8s/service.yaml
+
+2. Check status:
+   kubectl get deployments
+   kubectl get pods
+   kubectl get services
+
+3. Rollout and logs:
+   kubectl rollout status deployment/student-mental-health-api
+   kubectl logs -l app=student-mental-health-api --tail=50 -f
+
+4. Port forwarding (if NodePort is not directly accessible):
+   kubectl port-forward service/student-mental-health-api-service 8000:8000

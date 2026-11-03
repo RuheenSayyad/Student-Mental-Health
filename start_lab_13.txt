@@ -1,0 +1,17 @@
+START LAB 13 - END-TO-END AUTOMATED RETRAINING & CONTINUOUS DEPLOYMENT
+=============================================================================
+Instructions:
+1. Ensure the baseline MLOps pipeline and API serving are running.
+2. Ingest new batch of survey records into data/raw/new_student_mental_health.csv.
+3. Execute the automated monitor trigger:
+   python src/mlops_pipeline/12_monitor_trigger.py
+4. The script:
+   - Detects drift using KS-test and JS-divergence.
+   - Detects the new incoming dataset batch.
+   - Triggers student_mental_health_pipeline.py.
+   - Retrains the model, verifies the quality gate, and executes Champion-Challenger promotion.
+   - Automatically stages new production artifacts into deployment/.
+5. Check outputs:
+   - outputs/monitoring/monitor_trigger_report.json
+   - reports/lifecycle_report.json
+   - reports/deployment_automation_report.json

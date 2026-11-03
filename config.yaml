@@ -1,0 +1,58 @@
+# Student Mental Health MLOps Project Configuration (Labs 1-13)
+
+# Backward-compatible settings for Labs 3-6 (read by src/utils.py)
+dataset:
+  name: "Student Mental Health Survey"
+  raw_path: "data/raw/Student_Mental_Health.csv"
+  processed_dir: "data/processed"
+  target: "depression"
+  test_size: 0.25
+  random_state: 42
+
+# Pipeline configuration for Labs 7-13
+data:
+  raw_path: "data/raw/Student_Mental_Health.csv"
+  processed_dir: "data/processed"
+  target_column: "depression"
+  id_column: "student_id"
+
+split:
+  test_size: 0.25
+  random_state: 42
+
+model:
+  n_estimators: 150
+  max_depth: 6
+  random_state: 42
+  class_weight: "balanced"
+
+mlflow:
+  # Leave empty for local MLflow or set SQLite / remote URI
+  tracking_uri: "sqlite:///mlflow.db"
+  experiment_name: "Student_Depression_Prediction"
+  registered_model_name: "Student_Depression_Production_Model"
+  decision_metric: "recall"
+
+registry:
+  model_name: "Student_Depression_Production_Model"
+  decision_metric: "recall"
+
+quality_gate:
+  metric: "recall"
+  minimum_value: 0.50
+
+lab9:
+  repetitions: 3
+
+paths:
+  models_dir: "models"
+  outputs_dir: "outputs"
+  artifacts_dir: "artifacts"
+  reports_dir: "reports"
+  logs_dir: "logs"
+  preprocessor: "models/preprocessor.pkl"
+  model: "models/student_model.pkl"
+  evaluation_report: "reports/evaluation_report.json"
+  quality_gate_report: "reports/quality_gate_report.json"
+  failure_report: "reports/failure_report.json"
+  inference_output: "outputs/inference_predictions.csv"

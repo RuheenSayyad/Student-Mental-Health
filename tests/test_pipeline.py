@@ -60,7 +60,8 @@ class TestSplit(unittest.TestCase):
         a = load_and_split()
         b = load_and_split()
         X_train, X_test, y_train, y_test = a
-        self.assertEqual(len(X_train) + len(X_test), 101)
+        raw_count = len(pd.read_csv(RAW_PATH))
+        self.assertEqual(len(X_train) + len(X_test), raw_count)
         self.assertAlmostEqual(y_train.mean(), y_test.mean(), delta=0.05)
         pd.testing.assert_frame_equal(a[0], b[0])
 

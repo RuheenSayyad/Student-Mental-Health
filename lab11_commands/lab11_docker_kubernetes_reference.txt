@@ -1,0 +1,13 @@
+# Docker & Kubernetes Reference Manual
+
+# 1. Docker Build & Test
+docker build -t student-mental-health-api:1.0 .
+docker run -d -p 8000:8000 --name student_api student-mental-health-api:1.0
+curl http://localhost:8000/health
+docker stop student_api
+docker rm student_api
+
+# 2. Kubernetes Local Cluster Rollout
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+kubectl rollout status deployment/student-mental-health-api
